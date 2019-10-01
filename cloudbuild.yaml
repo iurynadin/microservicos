@@ -1,7 +1,11 @@
 
 steps:
+# arquivo para o GCP executar as tarefas passo a passo
 
 - id: "Rodando docker-compose"
-  name: 'gcr.io/$PROJECT_ID/docker-compose'
+  name: 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
   args: ['-f','docker-compose.cloudbuild.yaml','up','-d'] #-f : informar qual o arquivo, e nome do arquivo 
-# arquivo para o GCP executar as tarefas passo a passo
+
+- id: "Rodando docker ps"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['ps']
