@@ -6,15 +6,11 @@ steps:
   name: 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
   args: ['-f','docker-compose.cloudbuild.yaml','up','-d'] #-f : informar qual o arquivo, e nome do arquivo 
 
-- id: "Rodando docker ps"
-  name: 'gcr.io/cloud-builders/docker'
-  args: ['ps']
-
 - id: "Rodando composer"
   name: 'gcr.io/cloud-builders/docker'
   args: ['exec','-t','app','composer','install']
 
-- id: "Copiando .env"
+- id: "Copiando .env.example para .env"
   name: 'gcr.io/cloud-builders/docker'
   args: ['exec','-t','app','cp','.env.example','.env']
 
