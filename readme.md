@@ -30,7 +30,7 @@ nome do cluster: cluster-docker-laravel
 
 3. Criar a parte do password:
 - kubectl create secret generic mysql-pass --from-literal=password='colocar aqui a senha'
-- e na sequencia apliar as configuracões: kubect apply -f k8s/mysql
+- e na sequencia apliar as configuracões: kubectl apply -f k8s/mysql
 
 4. Criar os servios do redis:
 - kubectl apply -f k8s/redis
@@ -38,12 +38,9 @@ nome do cluster: cluster-docker-laravel
 5. Criar os serviços do nginx:
 - kubectl apply -f k8s/nginx
 
-5. Criar App-config:
-- kubectl apply -f k8s/app
-
-5. Criar App-Deployment:
+5. Criar App-config e Deployment:
 - kubectl apply -f k8s/app
 
 Continuar do link abaixo, mas antes crair um cluster e executar as tarefas acima
-### Configurando Cloudbuild
-Vídeo https://portal.code.education/lms/#/168/155/94/conteudos?capitulo=647&conteudo=5726
+### Resolvendo Permissão do kubenetes
+Vídeo https://portal.code.education/lms/#/168/155/94/conteudos?capitulo=647&conteudo=5728
