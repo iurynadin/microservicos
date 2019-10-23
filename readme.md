@@ -43,6 +43,11 @@ nome do cluster: cluster-docker-laravel
 
 6. (Provavelmente fazer uma vez só) No GCP, ir no ite IAM & Admin > IAM. Nas permissões, procurar pelo member ...@cloudbuild.gserviceaccount e clicar no botao de editar (lápis). Criar no "Add another Role" e escolher o item Kubernetes Engine Admin e Save
 
+7. Fazer um push no master p fazer o build
+
+8. Se ao entrar no ip do container do Nginx e aparecer o "Fie not found", entrar no container do app: kubectl exec -it app-6bc5b6fc79-fbg9z bash
+- executar o comando ``` ln -s /var/www /usr/share/nginx
+
 Continuar do link abaixo, mas antes crair um cluster e executar as tarefas acima
 ### Resolvendo Permissão do kubenetes
 Vídeo https://portal.code.education/lms/#/168/155/94/conteudos?capitulo=647&conteudo=5728
