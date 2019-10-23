@@ -41,6 +41,8 @@ nome do cluster: cluster-docker-laravel
 5. Criar App-config e Deployment:
 - kubectl apply -f k8s/app
 
+6. (Provavelmente fazer uma vez só) No GCP, ir no ite IAM & Admin > IAM. Nas permissões, procurar pelo member ...@cloudbuild.gserviceaccount e clicar no botao de editar (lápis). Criar no "Add another Role" e escolher o item Kubernetes Engine Admin e Save
+
 Continuar do link abaixo, mas antes crair um cluster e executar as tarefas acima
 ### Resolvendo Permissão do kubenetes
 Vídeo https://portal.code.education/lms/#/168/155/94/conteudos?capitulo=647&conteudo=5728
